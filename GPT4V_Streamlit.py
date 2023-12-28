@@ -10,7 +10,7 @@ image_paths = {
     "Web cam # 4": "images/GPT4V_OutOfStock_Image4.jpg"
 }
 
-# Defining various placeholders
+# Defining various variables
 current_image = None
 current_image_name = None
 analyse_button = False
@@ -43,9 +43,9 @@ image_placeholder = col2.empty()
 result_container = st.container()
 result_placeholder = result_container.empty()
 
-# Create a button for each Web cam
+# Creating button for each Web cam in the first column
 for image_name, image_path in image_paths.items():
-    # If the button is clicked, load the image and display it in the second column
+    # If the cam button is clicked, load the image and display it in the second column
     if col1.button(image_name):
         image = Image.open(image_path)
         image_placeholder.image(image=image, caption=image_name, use_column_width=True)
@@ -61,11 +61,11 @@ for image_name, image_path in image_paths.items():
         current_image_name = image_name
         st.session_state.camera = image_name
 
-# Create an analysis button in the first column
+# Creating analysis button in the first column
 if col1.button("Analyse"):
     analyse_button = True
 
-# If the analysis button is clicked and there is a current image, analyse the image and display the results in the first column
+# If the analysis button is clicked, use GPT-4V to analyse the image
 if analyse_button and current_image is not None:
     result = analyse_image(current_image)
     result_placeholder.text(
