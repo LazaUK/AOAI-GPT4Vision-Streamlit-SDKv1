@@ -3,7 +3,7 @@ GPT-4 Turbo with Vision is a multimodal Generative AI model, available for deplo
 
 In this repo, you will find the source code of a Streamlit Web app that analyses shelf images of a fictitious retail shop to detect potential out-of-stock situations. The Web app can run locally on your computer and requires access to your Azure OpenAI endpoint to interact with the GPT-4 Turbo with Vision model.
 
-To build this demo, I used the latest OpenAI Python SDK v1.x. To upgrade your openai Python package, please use the following pip command:
+To build this demo, I used the latest OpenAI Python SDK v1.x. To upgrade your *openai* Python package, please use the following pip command:
 ```
 pip install --upgrade openai
 ```
