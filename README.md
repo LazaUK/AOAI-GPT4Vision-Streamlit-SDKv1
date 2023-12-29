@@ -1,4 +1,4 @@
-# GPT-4 Turbo with Vision: Out-of-Stock Detection Demo Solution
+# GPT-4 Turbo with Vision: Out-of-Stock Detection - Demo Solution
 GPT-4 Turbo with Vision is a multimodal Generative AI model, available for deployment in the Azure OpenAI service. It can process images and text as prompts and generate relevant textual responses to questions about them.
 
 In this repo, you will find the source code of a Streamlit Web app that analyses shelf images of a fictitious retail shop to detect potential out-of-stock situations. The Web app can run locally on your computer and requires access to your Azure OpenAI endpoint to interact with the GPT-4 Turbo with Vision model.
