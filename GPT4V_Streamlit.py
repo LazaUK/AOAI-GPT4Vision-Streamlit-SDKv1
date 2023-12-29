@@ -44,7 +44,7 @@ def gpt4v_completion(image_path):
     response = client.chat.completions.create(
         model = AOAI_DEPLOYMENT, # model = "Azure OpenAI deployment name".
         messages = [
-            {"role": "system", "content": "You are a useful shop image analyser. You are checking for visible gaps on the shelves to detect out-of-stock situation. Important! When you detect gaps, you should report details of specific shellves, so that the shop staff can replenish products. Only, and crucially only when all shelves are well stocked, then you can reply with 'Ok' as a single word."},
+            {"role": "system", "content": "You are a useful shop image analyser. You are checking for visible gaps on the shelves to detect an out-of-stock situation. Important: when you detect gaps, you should report details of specific shelves, so that the shop staff can replenish products. Only, and crucially only when all shelves are well stocked, then you can reply with 'Ok' as a single word."},
             {"role": "user", "content": [  
                 { 
                     "type": "text", 
