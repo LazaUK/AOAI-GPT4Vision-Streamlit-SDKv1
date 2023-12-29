@@ -1,11 +1,9 @@
 # GPT-4 Turbo with Vision: Out-of-Stock Detection Demo Solution
-Using Azure OpenAI deployment of GPT-4-Turbo with Vision to analyse out-of-stock situation in a fictitious shop.
+GPT-4 Turbo with Vision is a multimodal Generative AI model, available for deployment in the Azure OpenAI service. It can process images and text as prompts and generate relevant textual responses to questions about them.
 
-... 
+In this repo, you will find the source code of a Streamlit Web app that analyses shelf images of a fictitious retail shop to detect potential out-of-stock situations. The Web app can run locally on your computer and requires access to your Azure OpenAI endpoint to interact with the GPT-4 Turbo with Vision model.
 
-Version 1106 of Azure OpenAI GPT models, such as GPT-35-Turbo and GPT-4-Turbo, now supports the use of parallel function calling. This new feature allows your Azure OpenAI based solution to extract multiple intents from a single prompt, check the functions available and then execute them in parallel. As a result, your solution will perform more effectively and efficiently because of fewer round-trips between required multiple API calls.
-
-In this repo I'll demo the use of the latest *openai* Python package v1.x, that was released in November 2023. To upgrade your *openai* python package, please use the following pip command:
+To build this demo, I used the latest OpenAI Python SDK v1.x. To upgrade your openai Python package, please use the following pip command:
 ```
 pip install --upgrade openai
 ```
