@@ -16,7 +16,7 @@ pip install --upgrade openai
 ## Part 1: Configuring Streamlit Web app
 1. To use API key authentication, assign API endpoint name, version and key, along with the Azure OpenAI deployment name to **OPENAI_API_BASE**, **OPENAI_API_VERSION**, **OPENAI_API_KEY** and **OPENAI_API_DEPLOY_VISION** environment variables.
 ![screenshot_1.1_environment](images/step1_flask_env.png)
->**Note**: If you want to use Entra ID (former Azure Active Directory) authentication instead, you may check for some samples [here](https://github.com/LazaUK/AOAI-EntraIDAuth-SDKv1).
+>**Note**: If you want to use Entra ID (former Azure Active Directory) authentication instead, you may check out some implementation options [here](https://github.com/LazaUK/AOAI-EntraIDAuth-SDKv1).
 3. Install required Python packages, by using pip command and provided requirements.txt file.
 ```
 pip install -r requirements.txt
