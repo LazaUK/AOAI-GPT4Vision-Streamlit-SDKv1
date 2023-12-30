@@ -23,4 +23,9 @@ pip install -r requirements.txt
 ```
 
 ## Part 2: Web app - User Guide
+1. To launch the Web app, you should run the following command from this repo's root folder
+2. If everything is installed correctly as per Part 1 instructions above, you should be able to access Web app at _http://localhost:8501_ locally.
+![screenshot_2.2_environment](part2_mainui.png)
+3. 
+
 ## Part 3: Web app - Developer Guide
