@@ -10,7 +10,7 @@ pip install --upgrade openai
 
 ## Table of contents:
 - [Part 1: Configuring Streamlit Web app](https://github.com/LazaUK/AOAI-GPT4Vision-Streamlit-SDKv1/tree/main#part-1-configuring-streamlit-web-app)
-- [Part 2: Web app - User Guide]()
+- [Part 2: Web app - User Guide](https://github.com/LazaUK/AOAI-GPT4Vision-Streamlit-SDKv1/tree/main#part-2-web-app---user-guide)
 - [Part 3: Web app - Developer Guide]()
 
 ## Part 1: Configuring Streamlit Web app
