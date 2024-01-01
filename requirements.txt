@@ -1,3 +1,2 @@
 openai
 streamlit
-base64
