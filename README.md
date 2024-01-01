@@ -25,7 +25,7 @@ pip install -r requirements.txt
 ## Part 2: Web app - User Guide
 1. To launch the Web app, you should run the following command from this repo's root folder
 ```
-streamlit run .\GPT4V_Streamlit.py
+streamlit run GPT4V_Streamlit.py
 ```
 2. If everything was installed correctly as per Part 1 instructions above, you should be able to access demo solution's Web page at http://localhost:8501 locally.
 ![screenshot_2.2_environment](images/part2_mainui.png)
