@@ -31,11 +31,11 @@ streamlit run GPT4V_Streamlit.py
 2. If everything was installed correctly as per the Part 1's instructions above, you should be able to access the demo solution's Web page at http://localhost:8501 locally.
 ![screenshot_2.2_environment](images/part2_mainui.png)
 3. The UI is very minimalistic. You need to click one of the Web cam buttons, first, to display a simulated shelf image of a fictitious retail shop.
-4. Then you can click the Analyse button to submit the selected image to your GPT-4 Turbo with Vision model in Azure OpenAI. If there are no significant gaps, then the model should reply with a simple "Ok". If the model detects a potential out-of-stock situation because of a wider gap, then it should reply with a more verbose answer, describing the location and specifics of its findings.
+4. Then you can click the Analyse button to submit the selected image to your GPT-4 Turbo with Vision model in Azure OpenAI. If there are no significant gaps, the model should reply with a simple "Ok". If the model detects a potential out-of-stock situation because of a wider gap, it should reply with a more verbose answer, describing the location and specifics of its findings.
 >**Note**: As a Generative AI solution, GPT-4 Turbo with Vision is not deterministic. So, you may get slightly different descriptions of the same image if it's analysed several times, which is expected.
 
 ## Part 3: Web app - Developer Guide
-1. This Web app is based on Streamlit, an open source Python framework, and doesn't require an explicit setup of a Web service or programming in any other languages.
+1. This Web app is based on Streamlit, an open source Python framework, and doesn't require an explicit setup of a Web service or programming in any other languages but Python.
 2. The **image_paths** dictionary contains button names for simulated Web cams and associated JPEG images of the shop shelves. If you want to use your own images, just update the relevant references.
 ``` Python
 image_paths = {
@@ -58,7 +58,7 @@ client = AzureOpenAI(
 with open(image_path, "rb") as image_file:
     base64_image = base64.b64encode(image_file.read()).decode("utf-8")
 ```
-5.  Base64 string is then passed as a part of the user prompt. Alternatively, you can enter URLs of remotely hosted images here.
+5.  Base64 string is then passed as a part of the user prompt. Alternatively, you can enter URLs of remotely hosted images.
 ``` Python
 { 
     "type": "image_url",
@@ -82,7 +82,7 @@ There are 2 potential options to re-use the provided Docker image.
 ```
 docker pull ghcr.io/lazauk/gpt4v-outofstock:latest
 ```
-2. Then you can launch it on your local machine and pass the values of 4 expected environment variables, described in Part 1 above. If you have values of those variables already setup on your host machines, then their values will be automatically passed with the Docker run command below.
+2. Then you can launch it on your local machine and pass the values of 4 expected environment variables, described in Part 1 above. If you have values of those variables already setup on your host machine, their values will be automatically passed with the Docker run command below.
 ```
 docker run -p 8501:8501 --env OPENAI_API_BASE --env OPENAI_API_DEPLOY_VISION --env OPENAI_API_KEY --env OPENAI_API_VERSION ghcr.io/lazauk/gpt4v-outofstock:latest
 ```
