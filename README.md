@@ -32,7 +32,44 @@ streamlit run GPT4V_Streamlit.py
 ![screenshot_2.2_environment](images/part2_mainui.png)
 3. The UI is very minimalistic. You need to click one of the Web cam buttons, first, to display simulated shelf image of fictitious retail shop.
 4. Then you can click Analyse button to submit selected image to your GPT-4 Turbo with Vision model in Azure OpenAI. If no significant gaps, then the model should reply with a simple "Ok". If the model will detect a potential out-of-stock situation because of the wider gap, then it should reply with a more verbose answer, describing location and specifics of its findings.
->**Note**: As a Generative AI solution, GPT-4 Turbo with Vision is not deterministic. So, you may get slightly different descriptions for the same image if analysed several time and it's expected.
+>**Note**: As a Generative AI solution, GPT-4 Turbo with Vision is not deterministic. So, you may get slightly different descriptions of the same image if analysed several time and it's expected.
 
 ## Part 3: Web app - Developer Guide
+1. This Web app is based on Streamlit, an open source Python framework and doesn't require explicit setup of a Web service or programming in any other languages.
+2. **image_paths** dictionary contains button names for mock Web cams and associated JPEG images of the shop shelves. If you want to use your own images, just update relevant references.
+``` Python
+image_paths = {
+    "Web cam # 1": "images/GPT4V_OutOfStock_Image1.jpg",
+    "Web cam # 2": "images/GPT4V_OutOfStock_Image2.jpg",
+    "Web cam # 3": "images/GPT4V_OutOfStock_Image3.jpg",
+    "Web cam # 4": "images/GPT4V_OutOfStock_Image4.jpg"
+}
+```
+3. Connection with the backend Azure OpenAI service is established through _openai_ Python SDK v1. Current implementation passes Azure OpenAI endpoint's API key as a parameter value of AzureOpenAI class. If necessary, you can switch to the Entra ID authentication instead.
+``` Python
+client = AzureOpenAI(
+    azure_endpoint = AOAI_API_BASE,
+    api_key = AOAI_API_KEY,
+    api_version = AOAI_API_VERSION
+)
+```
+4.  As test images are hosted locally, they are converted into Base64 strings - one of the supported GPT-4 Turbo with Vision's input formats. 
+``` Python
+with open(image_path, "rb") as image_file:
+    base64_image = base64.b64encode(image_file.read()).decode("utf-8")
+```
+5.  Base64 string is then passed as a part of the user prompt. Alternatively, you can enter here URLs of remotely hosted images.
+``` Python
+{ 
+    "type": "image_url",
+    "image_url": {
+        "url": f"data:image/jpeg;base64,{base64_image}"
+    }
+}
+```
+6.  As an "easter egg", the Web app will animate snow flakes on the first run or after Web browser session's refresh. Post-festive season, you can comment out line # 35.
+``` Python
+st.snow() # New Year's theme :)
+```
+
 ## Part 4: Web app - SysAdmin Guide
