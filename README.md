@@ -13,7 +13,7 @@ pip install --upgrade openai
 - [Part 2: Web app - User Guide](https://github.com/LazaUK/AOAI-GPT4Vision-Streamlit-SDKv1/tree/main?tab=readme-ov-file#part-2-web-app---user-guide)
 - [Part 3: Web app - Developer Guide](https://github.com/LazaUK/AOAI-GPT4Vision-Streamlit-SDKv1/tree/main?tab=readme-ov-file#part-3-web-app---developer-guide)
 - [Part 4: Web app - SysAdmin Guide](https://github.com/LazaUK/AOAI-GPT4Vision-Streamlit-SDKv1/tree/main?tab=readme-ov-file#part-4-web-app---sysadmin-guide)
-- [Part 5: 1-min demo on YouTube]()
+- [Part 5: 1-min demo on YouTube](https://github.com/LazaUK/AOAI-GPT4Vision-Streamlit-SDKv1/tree/main?tab=readme-ov-file#part-5-1-min-demo-on-youtube)
 
 ## Part 1: Configuring solution environment
 1. To use API key authentication, assign the API endpoint name, version and key, along with the Azure OpenAI deployment name of GPT-4 Turbo with Vision to **OPENAI_API_BASE**, **OPENAI_API_VERSION**, **OPENAI_API_KEY** and **OPENAI_API_DEPLOY_VISION** environment variables respectively.
