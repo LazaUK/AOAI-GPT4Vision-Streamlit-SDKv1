@@ -73,11 +73,11 @@ st.snow() # New Year's theme :)
 ```
 
 ## Part 4: Web app - SysAdmin Guide
-This repo comes with a companion Docker image on GitHub Container Registry (GHCR), which has a pre-built Web app with all the required dependencies. It allows you to launch the demo solution as a container without getting deep into its code's specific.
+This repo comes with a companion Docker image on GitHub Container Registry (GHCR), which has a pre-built Web app with all the required dependencies. It allows you to launch the demo solution as a container without getting deep into its code's specifics.
 
-There 2 potential options to re-use provided Docker image.
+There are 2 potential options to re-use the provided Docker image.
 
-### a) Using Docker image "as is":
+### a) Using the Docker image "as is":
 1. First you should download the image from GHCR.
 ```
 docker pull ghcr.io/lazauk/gpt4v-outofstock:latest
@@ -87,9 +87,9 @@ docker pull ghcr.io/lazauk/gpt4v-outofstock:latest
 docker run -p 8501:8501 --env OPENAI_API_BASE --env OPENAI_API_DEPLOY_VISION --env OPENAI_API_KEY --env OPENAI_API_VERSION ghcr.io/lazauk/gpt4v-outofstock:latest
 ```
 
-### b) Using Docker image as a base for your custom one:
-1. You can refer companion Docker image in your Dockerfile
+### b) Using the Docker image as a base for your custom one:
+1. You can refer to the companion Docker image in your Dockerfile.
 ```
 FROM ghcr.io/lazauk/gpt4v-outofstock:latest
 ```
-2. **GPT4V_Streamlit.py** file is located in **/app** working directory, while the images are in **/app/images**, where you can update / replace them to customise the solution.
+2. The **GPT4V_Streamlit.py** file is located in **/app** working directory, while the images are in **/app/images**, where you can update / replace them to customise the solution.
