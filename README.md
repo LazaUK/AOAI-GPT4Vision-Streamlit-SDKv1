@@ -15,7 +15,7 @@ pip install --upgrade openai
 - [Part 4: Web app - SysAdmin Guide](https://github.com/LazaUK/AOAI-GPT4Vision-Streamlit-SDKv1/tree/main?tab=readme-ov-file#part-4-web-app---sysadmin-guide)
 
 ## Part 1: Configuring solution environment
-1. To use API key authentication, assign API endpoint name, version and key, along with the Azure OpenAI deployment name to **OPENAI_API_BASE**, **OPENAI_API_VERSION**, **OPENAI_API_KEY** and **OPENAI_API_DEPLOY_VISION** environment variables respectively.
+1. To use API key authentication, assign API endpoint name, version and key, along with the Azure OpenAI deployment name of GPT-4 Turbo with Vision to **OPENAI_API_BASE**, **OPENAI_API_VERSION**, **OPENAI_API_KEY** and **OPENAI_API_DEPLOY_VISION** environment variables respectively.
 ![screenshot_1.1_environment](images/part1_environment.png)
 >**Note**: If you want to use Entra ID (former Azure Active Directory) authentication instead, you may find some implementation options [here](https://github.com/LazaUK/AOAI-EntraIDAuth-SDKv1).
 2. Install required Python packages, by using pip command and provided requirements.txt file.
@@ -74,13 +74,12 @@ st.snow() # New Year's theme :)
 
 ## Part 4: Web app - SysAdmin Guide
 1. This repo comes with an attached Docker image on GitHub Container Registry (GHCR), which has a pre-built environment with all the required dependencies. It allows you to launch the Web app as a container without getting deep into its code specific.
-2. There
-  - Pull
+2. There 2 potential options to re-use it. The first one is to use that Docker image "as is".
+  1. First you should download the image from GHCR.
 ```
 docker pull ghcr.io/lazauk/gpt4v-outofstock:latest
 ```
-  - Then
-
+  2. Then you can launch it on your local machine and pass the values of 4 expected environment variables, described in Part 1 above. If you have values of those variables already setup on your host machines, then their values will be automatically passed with the Docker run command below.
 ```
 docker run -p 8501:8501 --env OPENAI_API_BASE --env OPENAI_API_DEPLOY_VISION --env OPENAI_API_KEY --env OPENAI_API_VERSION ghcr.io/lazauk/gpt4v-outofstock:latest
 ```
