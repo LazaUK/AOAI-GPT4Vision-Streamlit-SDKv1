@@ -11,7 +11,7 @@ pip install --upgrade openai
 ## Table of contents:
 - [Part 1: Configuring solution environment](https://github.com/LazaUK/AOAI-GPT4Vision-Streamlit-SDKv1/tree/main#part-1-configuring-solution-environment)
 - [Part 2: Web app - User Guide](https://github.com/LazaUK/AOAI-GPT4Vision-Streamlit-SDKv1/tree/main#part-2-web-app---user-guide)
-- [Part 3: Web app - Developer Guide]()
+- [Part 3: Web app - Developer Guide](https://github.com/LazaUK/AOAI-GPT4Vision-Streamlit-SDKv1/tree/main?tab=readme-ov-file#part-3-web-app---developer-guide)
 - [Part 4: Web app - SysAdmin Guide]()
 
 ## Part 1: Configuring solution environment
