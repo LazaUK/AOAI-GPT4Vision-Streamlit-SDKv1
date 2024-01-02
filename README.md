@@ -87,5 +87,9 @@ docker pull ghcr.io/lazauk/gpt4v-outofstock:latest
 docker run -p 8501:8501 --env OPENAI_API_BASE --env OPENAI_API_DEPLOY_VISION --env OPENAI_API_KEY --env OPENAI_API_VERSION ghcr.io/lazauk/gpt4v-outofstock:latest
 ```
 
-### b) Using Docker image as a base for your own custom on:
-1. 
+### b) Using Docker image as a base for your custom one:
+1. You can refer companion Docker image in your Dockerfile
+```
+FROM ghcr.io/lazauk/gpt4v-outofstock:latest
+```
+2. **GPT4V_Streamlit.py** file is located in **/app** working directory, while the images are in **/app/images**, where you can update / replace them to customise the solution.
