@@ -75,11 +75,11 @@ st.snow() # New Year's theme :)
 ## Part 4: Web app - SysAdmin Guide
 1. This repo comes with an attached Docker image on GitHub Container Registry (GHCR), which has a pre-built environment with all the required dependencies. It allows you to launch the Web app as a container without getting deep into its code specific.
 2. There
-a) Pull
+   - Pull
 ```
 docker pull ghcr.io/lazauk/gpt4v-outofstock:latest
 ```
-b) Then
+    - Then
 ```
 docker run -p 8501:8501 --env OPENAI_API_BASE --env OPENAI_API_DEPLOY_VISION --env OPENAI_API_KEY --env OPENAI_API_VERSION ghcr.io/lazauk/gpt4v-outofstock:latest
 ```
