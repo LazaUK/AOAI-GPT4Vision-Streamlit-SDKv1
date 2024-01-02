@@ -35,8 +35,8 @@ streamlit run GPT4V_Streamlit.py
 >**Note**: As a Generative AI solution, GPT-4 Turbo with Vision is not deterministic. So, you may get slightly different descriptions of the same image if it's analysed several times, which is expected.
 
 ## Part 3: Web app - Developer Guide
-1. This Web app is based on Streamlit, an open source Python framework and doesn't require explicit setup of a Web service or programming in any other languages.
-2. **image_paths** dictionary contains button names for mock Web cams and associated JPEG images of the shop shelves. If you want to use your own images, just update relevant references.
+1. This Web app is based on Streamlit, an open source Python framework, and doesn't require an explicit setup of a Web service or programming in any other languages.
+2. The **image_paths** dictionary contains button names for simulated Web cams and associated JPEG images of the shop shelves. If you want to use your own images, just update the relevant references.
 ``` Python
 image_paths = {
     "Web cam # 1": "images/GPT4V_OutOfStock_Image1.jpg",
@@ -45,7 +45,7 @@ image_paths = {
     "Web cam # 4": "images/GPT4V_OutOfStock_Image4.jpg"
 }
 ```
-3. Connection with the backend Azure OpenAI service is established through _openai_ Python SDK v1. Current implementation passes Azure OpenAI endpoint's API key as a parameter value of AzureOpenAI class. If necessary, you can switch to the Entra ID authentication instead.
+3. Connection with the backend Azure OpenAI service is established through the _openai_ Python SDK v1. Current implementation passes the Azure OpenAI endpoint's API key as a parameter value of the AzureOpenAI class. If necessary, you can switch to the Entra ID authentication instead.
 ``` Python
 client = AzureOpenAI(
     azure_endpoint = AOAI_API_BASE,
@@ -53,12 +53,12 @@ client = AzureOpenAI(
     api_version = AOAI_API_VERSION
 )
 ```
-4.  As test images are hosted locally, they are converted into Base64 strings - one of the supported GPT-4 Turbo with Vision's input formats. 
+4.  As the test images are hosted locally, they are converted into Base64 strings - one of the supported GPT-4 Turbo with Vision's input formats. 
 ``` Python
 with open(image_path, "rb") as image_file:
     base64_image = base64.b64encode(image_file.read()).decode("utf-8")
 ```
-5.  Base64 string is then passed as a part of the user prompt. Alternatively, you can enter here URLs of remotely hosted images.
+5.  Base64 string is then passed as a part of the user prompt. Alternatively, you can enter URLs of remotely hosted images here.
 ``` Python
 { 
     "type": "image_url",
@@ -67,7 +67,7 @@ with open(image_path, "rb") as image_file:
     }
 }
 ```
-6.  As an "easter egg", the Web app will animate snow flakes on the first run or after Web browser session's refresh. Post-festive season, you can comment out line # 35.
+6.  As an "easter egg", the Web app will animate snow flakes on the first run or after a Web browser session's refresh. Post-festive season, you can comment out line # 35.
 ``` Python
 st.snow() # New Year's theme :)
 ```
