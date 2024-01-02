@@ -9,10 +9,10 @@ pip install --upgrade openai
 ```
 
 ## Table of contents:
-- [Part 1: Configuring solution environment](https://github.com/LazaUK/AOAI-GPT4Vision-Streamlit-SDKv1/tree/main#part-1-configuring-solution-environment)
-- [Part 2: Web app - User Guide](https://github.com/LazaUK/AOAI-GPT4Vision-Streamlit-SDKv1/tree/main#part-2-web-app---user-guide)
+- [Part 1: Configuring solution environment](https://github.com/LazaUK/AOAI-GPT4Vision-Streamlit-SDKv1/tree/main?tab=readme-ov-file#part-1-configuring-solution-environment)
+- [Part 2: Web app - User Guide](https://github.com/LazaUK/AOAI-GPT4Vision-Streamlit-SDKv1/tree/main?tab=readme-ov-file#part-2-web-app---user-guide)
 - [Part 3: Web app - Developer Guide](https://github.com/LazaUK/AOAI-GPT4Vision-Streamlit-SDKv1/tree/main?tab=readme-ov-file#part-3-web-app---developer-guide)
-- [Part 4: Web app - SysAdmin Guide]()
+- [Part 4: Web app - SysAdmin Guide](https://github.com/LazaUK/AOAI-GPT4Vision-Streamlit-SDKv1/tree/main?tab=readme-ov-file#part-4-web-app---sysadmin-guide)
 
 ## Part 1: Configuring solution environment
 1. To use API key authentication, assign API endpoint name, version and key, along with the Azure OpenAI deployment name to **OPENAI_API_BASE**, **OPENAI_API_VERSION**, **OPENAI_API_KEY** and **OPENAI_API_DEPLOY_VISION** environment variables respectively.
