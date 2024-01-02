@@ -75,11 +75,11 @@ st.snow() # New Year's theme :)
 ## Part 4: Web app - SysAdmin Guide
 1. This repo comes with an attached Docker image on GitHub Container Registry (GHCR), which has a pre-built environment with all the required dependencies. It allows you to launch the Web app as a container without getting deep into its code specific.
 2. There 2 potential options to re-use it. The first one is to use that Docker image "as is".
-  1. First you should download the image from GHCR.
+  a) First you should download the image from GHCR.
 ```
 docker pull ghcr.io/lazauk/gpt4v-outofstock:latest
 ```
-  2. Then you can launch it on your local machine and pass the values of 4 expected environment variables, described in Part 1 above. If you have values of those variables already setup on your host machines, then their values will be automatically passed with the Docker run command below.
+  b) Then you can launch it on your local machine and pass the values of 4 expected environment variables, described in Part 1 above. If you have values of those variables already setup on your host machines, then their values will be automatically passed with the Docker run command below.
 ```
 docker run -p 8501:8501 --env OPENAI_API_BASE --env OPENAI_API_DEPLOY_VISION --env OPENAI_API_KEY --env OPENAI_API_VERSION ghcr.io/lazauk/gpt4v-outofstock:latest
 ```
