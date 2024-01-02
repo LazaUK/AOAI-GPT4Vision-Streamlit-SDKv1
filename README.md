@@ -28,9 +28,11 @@ pip install -r requirements.txt
 ```
 streamlit run GPT4V_Streamlit.py
 ```
-2. If everything was installed correctly as per Part 1 instructions above, you should be able to access demo solution's Web page at http://localhost:8501 locally.
+2. If everything was installed correctly as per the Part 1's instructions above, you should be able to access demo solution's Web page at http://localhost:8501 locally.
 ![screenshot_2.2_environment](images/part2_mainui.png)
-4. 
+3. The UI is very minimalistic. You need to click one of the Web cam buttons, first, to display simulated shelf image of fictitious retail shop.
+4. Then you can click Analyse button to submit selected image to your GPT-4 Turbo with Vision model in Azure OpenAI. If no significant gaps, then the model should reply with a simple "Ok". If the model will detect a potential out-of-stock situation because of the wider gap, then it should reply with a more verbose answer, describing location and specifics of its findings.
+>**Note**: As a Generative AI solution, GPT-4 Turbo with Vision is not deterministic. So, you may get slightly different descriptions for the same image if analysed several time and it's expected.
 
 ## Part 3: Web app - Developer Guide
 ## Part 4: Web app - SysAdmin Guide
