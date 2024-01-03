@@ -79,7 +79,7 @@ This repo comes with a companion Docker image on GitHub Container Registry (GHCR
 There are 2 potential options to re-use the provided Docker image.
 
 ### a) Using the Docker image "as is":
-1. First you should download the image from GHCR.
+1. First you can download the image from GHCR and verify that it's accessible.
 ```
 docker pull ghcr.io/lazauk/gpt4v-outofstock:latest
 ```
